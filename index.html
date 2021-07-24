@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+    <title>E-Store | Online Shopping Mall</title>
+    <style>
+      section {
+        padding: 60px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-md navbar-light">
+      <div class="container-xxl">
+        <a href="#intro" class="navbar-brand">
+          <span class="fw-bold text-secondary"
+            ><i class="bi bi-book-half"></i> Net Ninja Pro - the Book
+          </span>
+        </a>
+        <!-- toggle button for mobile nav -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#main-nav"
+          aria-controls="main-nav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon outline-none"></span>
+        </button>
+
+        <!-- navbar links -->
+        <div
+          class="collapse navbar-collapse justify-content-end align-center"
+          id="main-nav"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a href="#topics" class="nav-link">About The Book</a>
+            </li>
+            <li class="nav-item">
+              <a href="#reviews" class="nav-link">Reviews</a>
+            </li>
+            <li class="nav-item">
+              <a href="#contact" class="nav-link">Get in Touch</a>
+            </li>
+            <li class="nav-item d-md-none">
+              <a href="#pricing" class="nav-link">Pricing</a>
+            </li>
+            <li class="nav-item ms-2 d-none d-md-inline">
+              <a href="#pricing" class="btn btn-secondary">buy now</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- bottom navbar -->
+    <nav class="navbar navbar-light bg-light fixed-bottom d-md-none">
+      <div
+        class="
+          navbar-nav
+          d-flex
+          flex-row
+          justify-content-around
+          container-fluid
+        "
+      >
+        <a
+          class="nav-link d-flex flex-column align-items-center"
+          href="#cart-sidebar"
+          data-bs-toggle="offcanvas"
+          role="button"
+          aria-controls="cart-sidebar"
+        >
+          <i class="fs-3 bi bi-bag"></i>
+          <span class="d-none d-sm-block">Cart</span>
+        </a>
+        <a class="nav-link d-flex flex-column align-items-center" href="#">
+          <i class="fs-3 bi bi-chat-left"></i>
+          <span class="d-none d-sm-block">Message</span>
+        </a>
+        <a class="nav-link d-flex flex-column align-items-center" href="#">
+          <i class="fs-3 bi bi-house"></i>
+          <span class="d-none d-sm-block">Home</span>
+        </a>
+        <a class="nav-link d-flex flex-column align-items-center" href="#">
+          <i class="fs-3 bi bi-bell"></i>
+          <span class="d-none d-sm-block">Notification</span>
+        </a>
+        <a
+          class="nav-link d-flex flex-column align-items-center"
+          href="#account-sidebar"
+          data-bs-toggle="offcanvas"
+          role="button"
+          aria-controls="account-sidebar"
+        >
+          <i class="fs-3 bi bi-person"></i>
+          <span class="d-none d-sm-block">Account</span>
+        </a>
+      </div>
+    </nav>
+
+    <!-- hamburger offcanvas -->
+    <a
+      href="#menu-sidebar"
+      data-bs-toggle="offcanvas"
+      role="button"
+      aria-controls="menu-sidebar"
+    >
+      <span class="fw-bold fs-1 text-secondary">
+        <i class="bi bi-list"></i>
+      </span>
+    </a>
+    <div
+      class="offcanvas offcanvas-end"
+      tabindex="-1"
+      id="menu-sidebar"
+      aria-labelledby="menu-sidebar-label"
+    >
+      <div class="offcanvas-header d-flex justify-content-between">
+        <div class="d-grid col-10 flex-fill">
+          <button type="button" class="btn btn-outline-secondary">
+            Log In
+          </button>
+        </div>
+        <button
+          type="button"
+          class="btn-close mx-3"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <!-- menu-items -->
+        <ul class="list-group">
+          <li class="list-group-item list-group-item-action border-0">
+            <a
+              href="#index.html"
+              class="
+                nav-link
+                text-secondary
+                d-flex
+                justify-content-between
+                align-items-center
+              "
+            >
+              <span>
+                <i class="bi bi-card-checklist me-2"></i>
+                Orders
+              </span>
+              <span><i class="bi bi-chevron-right"></i></span>
+            </a>
+          </li>
+          <li class="list-group-item list-group-item-action border-0">
+            <a
+              href="#index.html"
+              class="
+                nav-link
+                text-secondary
+                d-flex
+                justify-content-between
+                align-items-center
+              "
+            >
+              <span>
+                <i class="bi bi-gift me-2"></i>
+                GiftCard
+              </span>
+              <span><i class="bi bi-chevron-right"></i></span>
+            </a>
+          </li>
+          <li class="list-group-item list-group-item-action border-0">
+            <a
+              href="#index.html"
+              class="
+                nav-link
+                text-secondary
+                d-flex
+                justify-content-between
+                align-items-center
+              "
+            >
+              <span>
+                <i class="bi bi-phone me-2"></i>
+                Mobile Top Up
+              </span>
+              <span><i class="bi bi-chevron-right"></i></span>
+            </a>
+          </li>
+          <li class="list-group-item list-group-item-action border-0">
+            <a
+              href="#index.html"
+              class="
+                nav-link
+                text-secondary
+                d-flex
+                justify-content-between
+                align-items-center
+              "
+            >
+              <span>
+                <i class="bi bi-gift-fill me-2"></i>
+                Campaigns
+              </span>
+              <span><i class="bi bi-chevron-right"></i></span>
+            </a>
+          </li>
+          <li class="list-group-item list-group-item-action border-0">
+            <a
+              href="#index.html"
+              class="
+                nav-link
+                text-secondary
+                d-flex
+                justify-content-between
+                align-items-center
+              "
+            >
+              <span>
+                <i class="bi bi-heart me-2"></i>
+                Followed Shops
+              </span>
+              <span><i class="bi bi-chevron-right"></i></span>
+            </a>
+          </li>
+          <li class="list-group-item list-group-item-action border-0">
+            <a
+              href="#index.html"
+              class="
+                nav-link
+                text-secondary
+                d-flex
+                justify-content-between
+                align-items-center
+              "
+            >
+              <span>
+                <i class="bi bi-shop me-2"></i>
+                Shops
+              </span>
+              <span><i class="bi bi-chevron-right"></i></span>
+            </a>
+          </li>
+          <li class="list-group-item list-group-item-action border-0">
+            <a
+              href="#index.html"
+              class="
+                nav-link
+                text-secondary
+                d-flex
+                justify-content-between
+                align-items-center
+              "
+            >
+              <span>
+                <i class="bi bi-stopwatch me-2"></i>
+                Evaly Express Shops
+              </span>
+              <span><i class="bi bi-chevron-right"></i></span>
+            </a>
+          </li>
+          <li class="list-group-item list-group-item-action border-0">
+            <a
+              href="#index.html"
+              class="
+                nav-link
+                text-secondary
+                d-flex
+                justify-content-between
+                align-items-center
+              "
+            >
+              <span>
+                <i class="bi bi-newspaper me-2"></i>
+                News Feed
+              </span>
+              <span><i class="bi bi-chevron-right"></i></span>
+            </a>
+          </li>
+          <li class="list-group-item list-group-item-action border-0">
+            <a
+              href="#index.html"
+              class="
+                nav-link
+                text-secondary
+                d-flex
+                justify-content-between
+                align-items-center
+              "
+            >
+              <span>
+                <i class="bi bi-receipt me-2"></i>
+                Vouchers
+              </span>
+              <span><i class="bi bi-chevron-right"></i></span>
+            </a>
+          </li>
+          <li class="list-group-item list-group-item-action border-0">
+            <a
+              href="#index.html"
+              class="
+                nav-link
+                text-secondary
+                d-flex
+                justify-content-between
+                align-items-center
+              "
+            >
+              <span>
+                <i class="bi bi-bar-chart me-2"></i>
+                Career
+              </span>
+              <span><i class="bi bi-chevron-right"></i></span>
+            </a>
+          </li>
+          <li class="list-group-item list-group-item-action border-0">
+            <a
+              href="#index.html"
+              class="
+                nav-link
+                text-secondary
+                d-flex
+                justify-content-between
+                align-items-center
+              "
+            >
+              <span>
+                <i class="bi bi-cursor me-2"></i>
+                bKash payment
+              </span>
+              <span><i class="bi bi-chevron-right"></i></span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <hr />
+      <div class="offcanvas-footer container">
+        <!-- quick links -->
+        <p class="text-">
+          <a class="link-secondary" href="#">About Us</a> &middot;
+          <a class="link-secondary" href="#">Contact us</a> &middot;
+          <a class="link-secondary" href="#">Privacy Policy</a> &middot;
+          <a class="link-secondary" href="#">Purchasing Policy</a> &middot;
+          <a class="link-secondary" href="#">Cookie Policy</a> &middot;
+          <a class="link-secondary" href="#">Term & Conditions</a> &middot;
+          <a class="link-secondary" href="#">Returns and Replacement</a>
+        </p>
+        <p>&copy; E-store.com Limited 2021</p>
+      </div>
+    </div>
+
+    <!-- cart offcanvas -->
+    <div
+      class="offcanvas offcanvas-start"
+      tabindex="-1"
+      id="cart-sidebar"
+      aria-labelledby="cart-sidebar-label"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title fw-normal">Shopping Cart</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <hr />
+      <div class="offcanvas-body">
+        <!-- empty-cart -->
+        <div
+          class="
+            container-fluid
+            d-flex
+            flex-column
+            justify-content-center
+            align-items-center
+            text-muted
+          "
+        >
+          <i class="bi bi-emoji-frown display-1"></i>
+          <h1 class="display-4 text-center">Your bag is empty.</h1>
+        </div>
+      </div>
+      <hr />
+      <div class="offcanvas-footer container">
+        <dl class="d-flex justify-content-around fs-3">
+          <dt>Sub Total</dt>
+          <dd><mark>$00.00</mark></dd>
+        </dl>
+        <div class="d-grid mb-4">
+          <button class="btn btn-secondary py-2 fs-4 disabled" type="button">
+            Checkout<i class="bi bi-arrow-right ms-2"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- account offcanvas -->
+    <div
+      class="offcanvas offcanvas-end"
+      tabindex="-1"
+      id="account-sidebar"
+      aria-labelledby="account-sidebar-label"
+    >
+      <div class="offcanvas-header">
+        <div class="d-grid col-10">
+          <button type="button" class="btn btn-outline-secondary">
+            Log In
+          </button>
+        </div>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <!-- menu-items -->
+        <ul class="list-group">
+          <li class="list-group-item list-group-item-action border-0">
+            <a
+              href="#index.html"
+              class="
+                nav-link
+                text-secondary
+                d-flex
+                justify-content-between
+                align-items-center
+              "
+            >
+              <span>
+                <i class="bi bi-card-checklist me-2"></i>
+                Orders
+              </span>
+              <span><i class="bi bi-chevron-right"></i></span>
+            </a>
+          </li>
+          <li class="list-group-item list-group-item-action border-0">
+            <a
+              href="#index.html"
+              class="
+                nav-link
+                text-secondary
+                d-flex
+                justify-content-between
+                align-items-center
+              "
+            >
+              <span>
+                <i class="bi bi-gift me-2"></i>
+                GiftCard
+              </span>
+              <span><i class="bi bi-chevron-right"></i></span>
+            </a>
+          </li>
+          <li class="list-group-item list-group-item-action border-0">
+            <a
+              href="#index.html"
+              class="
+                nav-link
+                text-secondary
+                d-flex
+                justify-content-between
+                align-items-center
+              "
+            >
+              <span>
+                <i class="bi bi-phone me-2"></i>
+                Mobile Top Up
+              </span>
+              <span><i class="bi bi-chevron-right"></i></span>
+            </a>
+          </li>
+          <li class="list-group-item list-group-item-action border-0">
+            <a
+              href="#index.html"
+              class="
+                nav-link
+                text-secondary
+                d-flex
+                justify-content-between
+                align-items-center
+              "
+            >
+              <span>
+                <i class="bi bi-gift-fill me-2"></i>
+                Campaigns
+              </span>
+              <span><i class="bi bi-chevron-right"></i></span>
+            </a>
+          </li>
+          <li class="list-group-item list-group-item-action border-0">
+            <a
+              href="#index.html"
+              class="
+                nav-link
+                text-secondary
+                d-flex
+                justify-content-between
+                align-items-center
+              "
+            >
+              <span>
+                <i class="bi bi-heart me-2"></i>
+                Followed Shops
+              </span>
+              <span><i class="bi bi-chevron-right"></i></span>
+            </a>
+          </li>
+          <li class="list-group-item list-group-item-action border-0">
+            <a
+              href="#index.html"
+              class="
+                nav-link
+                text-secondary
+                d-flex
+                justify-content-between
+                align-items-center
+              "
+            >
+              <span>
+                <i class="bi bi-shop me-2"></i>
+                Shops
+              </span>
+              <span><i class="bi bi-chevron-right"></i></span>
+            </a>
+          </li>
+          <li class="list-group-item list-group-item-action border-0">
+            <a
+              href="#index.html"
+              class="
+                nav-link
+                text-secondary
+                d-flex
+                justify-content-between
+                align-items-center
+              "
+            >
+              <span>
+                <i class="bi bi-stopwatch me-2"></i>
+                Evaly Express Shops
+              </span>
+              <span><i class="bi bi-chevron-right"></i></span>
+            </a>
+          </li>
+          <li class="list-group-item list-group-item-action border-0">
+            <a
+              href="#index.html"
+              class="
+                nav-link
+                text-secondary
+                d-flex
+                justify-content-between
+                align-items-center
+              "
+            >
+              <span>
+                <i class="bi bi-newspaper me-2"></i>
+                News Feed
+              </span>
+              <span><i class="bi bi-chevron-right"></i></span>
+            </a>
+          </li>
+          <li class="list-group-item list-group-item-action border-0">
+            <a
+              href="#index.html"
+              class="
+                nav-link
+                text-secondary
+                d-flex
+                justify-content-between
+                align-items-center
+              "
+            >
+              <span>
+                <i class="bi bi-receipt me-2"></i>
+                Vouchers
+              </span>
+              <span><i class="bi bi-chevron-right"></i></span>
+            </a>
+          </li>
+          <li class="list-group-item list-group-item-action border-0">
+            <a
+              href="#index.html"
+              class="
+                nav-link
+                text-secondary
+                d-flex
+                justify-content-between
+                align-items-center
+              "
+            >
+              <span>
+                <i class="bi bi-bar-chart me-2"></i>
+                Career
+              </span>
+              <span><i class="bi bi-chevron-right"></i></span>
+            </a>
+          </li>
+          <li class="list-group-item list-group-item-action border-0">
+            <a
+              href="#index.html"
+              class="
+                nav-link
+                text-secondary
+                d-flex
+                justify-content-between
+                align-items-center
+              "
+            >
+              <span>
+                <i class="bi bi-cursor me-2"></i>
+                bKash payment
+              </span>
+              <span><i class="bi bi-chevron-right"></i></span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <hr />
+      <div class="offcanvas-footer container">
+        <!-- quick links -->
+        <p class="text-">
+          <a class="link-secondary" href="#">About Us</a> &middot;
+          <a class="link-secondary" href="#">Contact us</a> &middot;
+          <a class="link-secondary" href="#">Privacy Policy</a> &middot;
+          <a class="link-secondary" href="#">Purchasing Policy</a> &middot;
+          <a class="link-secondary" href="#">Cookie Policy</a> &middot;
+          <a class="link-secondary" href="#">Term & Conditions</a> &middot;
+          <a class="link-secondary" href="#">Returns and Replacement</a>
+        </p>
+        <p>&copy; E-yard.com Limited 2021</p>
+      </div>
+    </div>
+    <!-- Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
