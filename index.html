@@ -23,6 +23,157 @@
     </style>
   </head>
   <body>
+    <header class="fixed-top">
+      <!-- top--contact navbar -->
+      <nav class="navbar d-none d-md-block bg-light">
+        <div class="container-xxl">
+          <div class="navbar-nav d-flex flex-row w-100 gap-4 mx-3">
+            <a href="#" class="nav-link">
+              <i class="bi bi-telephone text-danger"></i>
+              <span class="text-dark">01701039997</span>
+            </a>
+
+            <a href="#" class="nav-link">
+              <i class="bi bi-envelope text-danger"></i>
+              <span class="text-dark">mntanveer9196@gmail.com</span>
+            </a>
+
+            <a href="#" class="nav-link ms-auto">
+              <i class="bi bi-phone text-danger"></i>
+              <span class="text-dark">Save big on our app!</span>
+            </a>
+          </div>
+        </div>
+      </nav>
+
+      <!-- top--main navbar -->
+      <nav class="navbar border-bottom bg-white">
+        <div class="container-xxl">
+          <div
+            class="
+              navbar-nav
+              d-flex
+              flex-row
+              align-items-center
+              gap-4
+              w-100
+              mx-3
+            "
+          >
+            <!-- nav logo -->
+            <a
+              class="
+                navbar-brand
+                fs-3
+                fw-bolder
+                me-0
+                text-dark
+                d-none d-md-block
+              "
+              href="#"
+              >E-Store</a
+            >
+            <!-- hamburger menu -->
+            <a
+              href="#menu-sidebar"
+              data-bs-toggle="offcanvas"
+              role="button"
+              aria-controls="menu-sidebar"
+              class="d-md-none"
+            >
+              <span class="fw-bold fs-1 text-secondary">
+                <i class="bi bi-list"></i>
+              </span>
+            </a>
+            <form class="d-flex input-group flex-grow-1">
+              <input
+                class="form-control border-2 border-danger"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-danger px-4" type="submit">
+                <i class="bi bi-search"></i>
+              </button>
+            </form>
+            <div class="navbar-nav d-none d-md-block">
+              <div class="nav-item d-flex flex-row gap-4">
+                <a
+                  class="nav-link"
+                  href="#cart-sidebar"
+                  data-bs-toggle="offcanvas"
+                  role="button"
+                  aria-controls="cart-sidebar"
+                >
+                  <i class="text-dark bi bi-bag"></i>
+                </a>
+                <a class="nav-link" href="#">
+                  <i class="text-dark bi bi-chat-left"></i>
+                </a>
+                <a class="nav-link" href="#">
+                  <i class="text-dark bi bi-bell"></i>
+                </a>
+                <a
+                  class="nav-link"
+                  href="#account-sidebar"
+                  data-bs-toggle="offcanvas"
+                  role="button"
+                  aria-controls="account-sidebar"
+                >
+                  <i class="text-dark bi bi-person"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- top--main bottom navbar -->
+      <nav class="navbar d-none d-md-block bg-dark py-0">
+        <div class="container-xxl">
+          <div
+            class="
+              navbar-nav
+              d-flex
+              flex-row
+              align-items-center
+              w-100
+              gap-3 gap-lg-5
+              mx-3
+            "
+          >
+            <a
+              href="#menu-sidebar"
+              data-bs-toggle="offcanvas"
+              role="button"
+              aria-controls="menu-sidebar"
+              class="
+                nav-link
+                bg-danger
+                fs-5
+                px-4
+                me-3
+                text-white
+                d-flex
+                align-items-center
+              "
+            >
+              <i class="bi bi-list me-2"></i>
+              <div class="">Catagories</div>
+              <i class="bi bi-chevron-down d-none d-lg-block ms-4"></i>
+            </a>
+
+            <a href="#" class="text-white nav-link">All Shops</a>
+            <a href="#" class="text-white nav-link">Campaigns</a>
+            <a href="#" class="text-white nav-link">Gift Card</a>
+            <a href="#" class="text-white nav-link">Express</a>
+            <a href="#" class="text-white nav-link">Priority shop</a>
+            <a href="#" class="text-white nav-link">Help</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
     <!-- bottom navbar -->
     <nav class="navbar navbar-light bg-light fixed-bottom d-md-none">
       <div
@@ -70,16 +221,6 @@
     </nav>
 
     <!-- hamburger offcanvas -->
-    <a
-      href="#menu-sidebar"
-      data-bs-toggle="offcanvas"
-      role="button"
-      aria-controls="menu-sidebar"
-    >
-      <span class="fw-bold fs-1 text-secondary">
-        <i class="bi bi-list"></i>
-      </span>
-    </a>
     <div
       class="offcanvas offcanvas-end"
       tabindex="-1"
