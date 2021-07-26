@@ -18,21 +18,27 @@
     <title>E-Store | Online Shopping Mall</title>
     <style>
       section {
-        padding: 80px 0;
+        padding: 30px 0 50px 0;
       }
-      @media screen and (min-width: 768px) {
+      #banner {
+        padding-top: 80px;
+      }
+      @media only screen and (min-width: 768px) {
         #banner {
-          margin-top: 120px;
+          margin-top: 100px;
         }
       }
       .campaign-banner {
         background-image: linear-gradient(
             to right,
-            rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.9),
             rgba(67, 67, 67, 0.7)
           ),
-          url(images/campaign2.jpg);
+          url(images/banner/campaign.jpg);
         background-size: cover;
+        cursor: pointer;
+      }
+      .brand {
         cursor: pointer;
       }
     </style>
@@ -397,7 +403,6 @@
     </header>
 
     <!-- !banner section -->
-
     <section id="banner">
       <!-- *carousel -->
       <div class="container">
@@ -432,21 +437,21 @@
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <img
-                  src="images/img1.png"
+                  src="images/banner/img1.png"
                   class="d-block w-100"
                   alt="slider-1"
                 />
               </div>
               <div class="carousel-item">
                 <img
-                  src="images/img2.png"
+                  src="images/banner/img2.png"
                   class="d-block w-100"
                   alt="slider-2"
                 />
               </div>
               <div class="carousel-item">
                 <img
-                  src="images/img3.png"
+                  src="images/banner/img3.png"
                   class="d-block w-100"
                   alt="slider-3"
                 />
@@ -482,22 +487,152 @@
 
       <!-- *campaigns -->
       <div class="container mt-4">
-        <div class="mb-3">
-          <h4>Ongoing Campaigns</h4>
+        <div class="mb-2">
+          <h5>Ongoing Campaigns</h5>
         </div>
-        <div class="row gy-3">
+        <div class="row gy-2">
           <div class="col-md-6">
-            <div class="campaign-banner text-white p-3 rounded">
+            <div class="campaign-banner text-white p-3 p-lg-5 rounded">
               <h3>Estore Priority Store</h3>
-              <p class="text-secondary">
-                Get your grocery within 1hr notionwide
-              </p>
+              <p class="text-muted">Get your grocery within 1hr notionwide</p>
             </div>
           </div>
           <div class="col-md-6">
-            <div class="campaign-banner text-white p-3 rounded">
+            <div class="campaign-banner text-white p-3 p-lg-5 rounded">
               <h3>Estore Cyclone</h3>
-              <p class="text-secondary">Biggest deal | Get upto 80% off</p>
+              <p class="text-muted">Biggest deal | Get upto 80% off</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- !Shops -->
+    <section class="mb-5">
+      <div class="container">
+        <div class="mb-4">
+          <h2>Shop By Brands</h2>
+        </div>
+
+        <div class="row align-items-center g-3">
+          <div class="brand col-4 col-md-3 col-xl-2">
+            <div class="card border-0 shadow">
+              <div class="card-img-top p-3 pb-0">
+                <img class="img-fluid" src="images/brands/toyota.png" alt="" />
+              </div>
+              <div class="text-center card-body p-2">
+                <h5 class="card-title">Toyota</h5>
+              </div>
+            </div>
+          </div>
+
+          <div class="brand col-4 col-md-3 col-xl-2">
+            <div class="card border-0 shadow">
+              <div class="card-img-top p-3 pb-0">
+                <img class="img-fluid" src="images/brands/teer.png" alt="" />
+              </div>
+              <div class="text-center card-body p-2">
+                <h5 class="card-title">Teer</h5>
+              </div>
+            </div>
+          </div>
+          <div class="brand col-4 col-md-3 col-xl-2">
+            <div class="card border-0 shadow">
+              <div class="card-img-top p-3 pb-0">
+                <img class="img-fluid" src="images/brands/samsung.png" alt="" />
+              </div>
+              <div class="text-center card-body p-2">
+                <h5 class="card-title">Samsung</h5>
+              </div>
+            </div>
+          </div>
+          <div class="brand col-4 col-md-3 col-xl-2">
+            <div class="card border-0 shadow">
+              <div class="card-img-top p-3 pb-0">
+                <img class="img-fluid" src="images/brands/nestle.png" alt="" />
+              </div>
+              <div class="text-center card-body p-2">
+                <h5 class="card-title">Nestle</h5>
+              </div>
+            </div>
+          </div>
+          <div class="brand col-4 col-md-3 col-xl-2">
+            <div class="card border-0 shadow">
+              <div class="card-img-top p-3 pb-0">
+                <img class="img-fluid" src="images/brands/walton.png" alt="" />
+              </div>
+              <div class="text-center card-body p-2">
+                <h5 class="card-title">Walton</h5>
+              </div>
+            </div>
+          </div>
+          <div class="brand col-4 col-md-3 col-xl-2">
+            <div class="card border-0 shadow">
+              <div class="card-img-top p-3 pb-0">
+                <img class="img-fluid" src="images/brands/xiomi.png" alt="" />
+              </div>
+              <div class="text-center card-body p-2">
+                <h5 class="card-title">MI</h5>
+              </div>
+            </div>
+          </div>
+          <div class="brand col-4 col-md-3 col-xl-2">
+            <div class="card border-0 shadow">
+              <div class="card-img-top p-3 pb-0">
+                <img class="img-fluid" src="images/brands/bata.png" alt="" />
+              </div>
+              <div class="text-center card-body p-2">
+                <h5 class="card-title">Bata</h5>
+              </div>
+            </div>
+          </div>
+          <div class="brand col-4 col-md-3 col-xl-2">
+            <div class="card border-0 shadow">
+              <div class="card-img-top p-3 pb-0">
+                <img class="img-fluid" src="images/brands/nokia.png" alt="" />
+              </div>
+              <div class="text-center card-body p-2">
+                <h5 class="card-title">Nokia</h5>
+              </div>
+            </div>
+          </div>
+          <div class="brand col-4 col-md-3 col-xl-2">
+            <div class="card border-0 shadow">
+              <div class="card-img-top p-3 pb-0">
+                <img
+                  class="img-fluid"
+                  src="images/brands/unilever.png"
+                  alt=""
+                />
+              </div>
+              <div class="text-center card-body p-2">
+                <h5 class="card-title">Unilever</h5>
+              </div>
+            </div>
+          </div>
+          <div class="brand col-4 col-md-3 col-xl-2">
+            <div class="card border-0 shadow">
+              <div class="card-img-top p-3 pb-0">
+                <img class="img-fluid" src="images/brands/rfl.png" alt="" />
+              </div>
+              <div class="text-center card-body p-2">
+                <h5 class="card-title">RFL</h5>
+              </div>
+            </div>
+          </div>
+          <div class="brand col-4 col-md-3 col-xl-2">
+            <div class="card border-0 shadow">
+              <div class="card-img-top p-3 pb-0">
+                <img class="img-fluid" src="images/brands/pran.png" alt="" />
+              </div>
+              <div class="text-center card-body p-2">
+                <h5 class="card-title">Pran</h5>
+              </div>
+            </div>
+          </div>
+          <div class="col-4 col-md-3 col-xl-2">
+            <div class="text-center">
+              <button class="btn btn-danger">View more</button>
             </div>
           </div>
         </div>
