@@ -25,6 +25,16 @@
           margin-top: 120px;
         }
       }
+      .campaign-banner {
+        background-image: linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0.7),
+            rgba(67, 67, 67, 0.7)
+          ),
+          url(images/campaign2.jpg);
+        background-size: cover;
+        cursor: pointer;
+      }
     </style>
   </head>
   <body>
@@ -32,8 +42,8 @@
     <header class="fixed-top">
       <!-- top--contact navbar -->
       <nav class="navbar d-none d-md-block bg-light">
-        <div class="container-xl">
-          <div class="navbar-nav d-flex flex-row w-100 gap-4 mx-3">
+        <div class="container">
+          <div class="navbar-nav d-flex flex-row w-100 gap-4">
             <a href="#" class="nav-link">
               <i class="bi bi-telephone text-danger"></i>
               <span class="text-dark">01701039997</span>
@@ -54,17 +64,9 @@
 
       <!-- top--main navbar -->
       <nav class="navbar border-bottom bg-white">
-        <div class="container-xl">
+        <div class="container">
           <div
-            class="
-              navbar-nav
-              d-flex
-              flex-row
-              align-items-center
-              gap-4
-              w-100
-              mx-md-3
-            "
+            class="navbar-nav d-flex flex-row align-items-center gap-4 w-100"
           >
             <!-- nav logo -->
             <a
@@ -136,8 +138,8 @@
 
       <!-- top--main bottom navbar -->
       <nav class="navbar navbar-expand d-none d-md-block bg-dark py-0">
-        <div class="container-xl">
-          <ul class="navbar-nav gap-2 gap-lg-4 gap-xl-5 mx-3">
+        <div class="container">
+          <ul class="navbar-nav gap-1 gap-xl-5">
             <li class="nav-item">
               <a
                 type="button"
@@ -145,7 +147,7 @@
                 data-bs-toggle="offcanvas"
                 role="button"
                 aria-controls="menu-sidebar"
-                class="text-white fs-3 px-2"
+                class="text-white fs-3"
               >
                 <i class="bi bi-list"></i>
               </a>
@@ -395,8 +397,10 @@
     </header>
 
     <!-- !banner section -->
+
     <section id="banner">
-      <div class="container-xxl bg-light">
+      <!-- *carousel -->
+      <div class="container">
         <div class="row justify-content-center">
           <div
             id="bannerCarousel"
@@ -475,10 +479,30 @@
           </div>
         </div>
       </div>
-    </section>
 
-    <!-- !ongoing campaigns -->
-    <section id="campaigns"></section>
+      <!-- *campaigns -->
+      <div class="container mt-4">
+        <div class="mb-3">
+          <h4>Ongoing Campaigns</h4>
+        </div>
+        <div class="row gy-3">
+          <div class="col-md-6">
+            <div class="campaign-banner text-white p-3 rounded">
+              <h3>Estore Priority Store</h3>
+              <p class="text-secondary">
+                Get your grocery within 1hr notionwide
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="campaign-banner text-white p-3 rounded">
+              <h3>Estore Cyclone</h3>
+              <p class="text-secondary">Biggest deal | Get upto 80% off</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- !Offcanvases -->
     <!--* 1)hamburger offcanvas -->
